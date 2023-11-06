@@ -1,5 +1,8 @@
 # CourseApp
 
+#Chris Darden 2023
+This app is the code for the ongoing tutorial in the course on Udemy.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.9.
 
 ## Development server

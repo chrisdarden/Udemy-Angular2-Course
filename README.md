@@ -2,10 +2,6 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0.
 
-## VERY IMPORTANT
-
-make sure you install the dependencies by using the command `npm install --legacy-peer-deps` or this won't compile properly. node uses like 250mb so I am sorry.
-
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

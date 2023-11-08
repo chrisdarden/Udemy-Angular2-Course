@@ -12,6 +12,7 @@
     <div class="col-xs-12">
       <h3>&nbsp;&nbsp;&nbsp;&nbsp;I'm in the App Component!</h3>
       <hr>
+      <app-server></app-server>
 
       <ol>
         <li>Add a Input field which updates a property ('username') via Two-Way-Binding</li>
@@ -19,10 +20,13 @@
         <li>Add a button which may only be clicked if the username is NOT an empty string</li>
         <li>Upon clicking the button, the username should be reset to an empty string</li>
       </ol>
-      <p>1) &nbsp;<input type="text" id="username" placeholder="Username"></p>
-      <p>2) &nbsp;Username entered: </p>
-      <p>3) &nbsp;<button type="button" id="resetServerName" name="resetServerName" disabled>Reset Server Name</button>
-      </p>
+      <ol>
+        <li>&nbsp;<input type="text" id="username" placeholder="Username"></li>
+        <li>&nbsp;Username entered: {{ username }}</li>
+        <li>&nbsp;<button type="button" id="resetServerName" name="resetServerName" disabled>Reset Server
+            Name</button>
+        </li>
+      </ol>
     </div>
   </div>
 </div>

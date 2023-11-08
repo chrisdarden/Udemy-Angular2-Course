@@ -3,9 +3,10 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
+import { ServerComponent } from "./server/server.component";
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, ServerComponent],
   imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent]

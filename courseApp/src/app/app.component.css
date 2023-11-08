@@ -1,0 +1,10 @@
+h3 {
+    color: blueviolet;
+    
+}
+
+p, li {
+    color: blue;
+    line-height: 25px;
+    list-style:inside;
+}

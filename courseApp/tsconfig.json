@@ -1,10 +1,13 @@
 {
   "compileOnSave": false,
-  "compilerOptions": {
+  "angularCompilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
+    "strict": true,
+    "strictTemplates": true,
     "declaration": false,
+    "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,

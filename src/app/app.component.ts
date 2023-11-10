@@ -18,7 +18,8 @@ export class AppComponent {
   }
 
   constructor () { 
-    this.buttonClickedStatus;
+    
+    this.buttonClickedStatus = false;
     console.log("Button clicked: " + this.buttonClickedStatus);
 }
 
@@ -40,7 +41,8 @@ buttonClicked(event: any) {
   this.buttonClickedStatus = true;
   console.log(<HTMLInputElement>event);
   console.log("button clicked status = " + this.buttonClickedStatus);
-  return this.buttonClickedStatus === true ? "block" : "none";
+  console.log(this.buttonClickedStatus === true ? "block" : "none");
+  return this.buttonClickedStatus === true ? "block" : "none"; 
   
 
 }

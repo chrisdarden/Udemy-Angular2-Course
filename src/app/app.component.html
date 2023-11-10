@@ -21,12 +21,10 @@
         <li>Upon clicking the button, the username should be reset to an empty string</li>
       </ol>
       <ol>
-        <li><label>Username:</label>&nbsp;<input type="text" class="form-control" [(ngModel)]="userName"
-            (input)="onUpdateUserName($event)" placeholder="Username" (click)="($event)">
-        </li>
-        <li>&nbsp;Username entered: {{ userName }}</li>
-        <li>&nbsp;<button type="button" class="btn btn-primary" [disabled]="!userName"
-            (click)="resetUserNameButtonClick($event)">Reset Username</button>
+        <li>&nbsp;<input type="text" id="username" placeholder="Username"></li>
+        <li>&nbsp;Username entered: {{ username }}</li>
+        <li>&nbsp;<button type="button" id="resetServerName" name="resetServerName">Reset Server
+            Name</button>
         </li>
       </ol>
     </div>

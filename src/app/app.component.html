@@ -40,9 +40,10 @@
           (ngClass)</li>
       </ol>
       <ol>
-        <li><button type="submit" class='btn btn-primary' (click)="buttonClicked($event)">Display Details</button></li>
+        <li><button type="submit" class='btn btn-primary' (click)="buttonClicked($event)">Display Details</button>
+        </li>
         <li>
-          <p [ngStyle]="{display: buttonClickedStatus}">'Secret password = tuna'</p>
+          <p [ngStyle]="{'display': buttonClickedStatus ? 'block' : 'none'}">'Secret password = tuna'</p>
         </li>
         <li></li>
         <li></li>

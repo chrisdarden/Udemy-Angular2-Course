@@ -7,3 +7,6 @@ ol, p {
     line-height: 30px;
 }
 
+p {
+    display: none;
+}

@@ -12,15 +12,12 @@ export class AppComponent {
   userName: string = "";
   clicks = [];
   buttonClickedStatus: boolean = false;
-  
+
   getUsername(): string {
     return this.userName;
   }
 
   constructor () { 
-    
-    this.buttonClickedStatus = false;
-    console.log("Button clicked: " + this.buttonClickedStatus);
 }
 
 onUpdateUserName(event: any) {
@@ -33,18 +30,18 @@ resetUserNameButtonClick(event: any) {
   console.log(event)
   // this.userName = (<HTMLInputElement>event.target).innerHTML = "";
   this.userName = "";
-
 }
 
 buttonClicked(event: any) {
-  console.log("clicked");
-  this.buttonClickedStatus = true;
-  console.log(<HTMLInputElement>event);
-  console.log("button clicked status = " + this.buttonClickedStatus);
-  console.log(this.buttonClickedStatus === true ? "block" : "none");
-  return this.buttonClickedStatus === true ? "block" : "none"; 
+  if(!this.buttonClickedStatus) {
+    this.buttonClickedStatus = true;
+  }
+  else {
+    this.buttonClickedStatus = false;
+  }
+  console.log(event);
+
   
-
+  
 }
-
 }

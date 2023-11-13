@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h3>&nbsp;&nbsp;&nbsp;&nbsp;I'm in the App Component!</h3>
+      <hr>
+      <app-server></app-server>
+
+      <ol>
+        <li>Add a Input field which updates a property ('username') via Two-Way-Binding</li>
+        <li>Output the username property via String Interpolation (in a paragraph below the input)</li>
+        <li>Add a button which may only be clicked if the username is NOT an empty string</li>
+        <li>Upon clicking the button, the username should be reset to an empty string</li>
+      </ol>
+      <ol>
+        <li><label>Username:</label>&nbsp;<input type="text" class="form-control" [(ngModel)]="userName"
+            (input)="onUpdateUserName($event)" placeholder="Username" (click)="($event)">
+        </li>
+        <li>&nbsp;Username entered: {{ userName }}</li>
+        <li>&nbsp;<button type="button" class="btn btn-primary" [disabled]="!userName"
+            (click)="resetUserNameButtonClick($event)">Reset Username</button>
+        </li>
+      </ol>
+      <hr>
+      <ol>
+        <li>Add a button wich says "Display Details"</li>
+        <li>Add a paragraph with any content of your choice (e.g. 'Secret password = tuna')</li>
+        <li>Toggle the displaying of that paragraph with the button created in the frist step</li>
+        <li>Log all button clicks in an array and output that array below the secret paragraph (maybe log a timestamp or
+          simply an incrementing number</li>
+        <li>Starting at the 5th log item, give all future log items a blue background (via ngStyle) and white color
+          (ngClass)</li>
+      </ol>
+      <ol>
+        <li><button type="submit" class='btn btn-primary' (click)="buttonClicked($event)">Display Details</button>
+        </li>
+        <li>
+          <p [ngStyle]="{'display': buttonClickedStatus ? 'block' : 'none'}">'Secret password = tuna'</p>
+        </li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+</html>

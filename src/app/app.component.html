@@ -46,10 +46,10 @@
           <p [ngStyle]="{'display': buttonClickedStatus ? 'block' : 'none'}">'Secret password = tuna'</p>
         </li>
         <li>
-          Clicks: {{ this.clickCountArray }}
+          <div *ngFor="let click of clickCountArray; let i = index"
+            [ngStyle]="{'background-color': i >= 4 ? 'blue' : 'transparent'}" [ngClass]="{'white-text': i >= 4}">Clicks:
+            {{ click }}</div>
         </li>
-        <li></li>
-        <li></li>
       </ol>
     </div>
   </div>

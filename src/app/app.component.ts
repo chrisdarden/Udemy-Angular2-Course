@@ -34,16 +34,30 @@ resetUserNameButtonClick(event: any) {
 }
 
 buttonClicked(event: any) {
-  if(!this.buttonClickedStatus) {
+  if(!this.buttonClickedStatus && this.clickCountArray.length >= 5) {
     this.buttonClickedStatus = true;
     this.clickCount++;
     this.clickCountArray.push(this.clickCount);
+    console.log("clickCount: " + this.clickCountArray.length);
+    console.log("returning blue");
+    return "blue";
+    } 
+
+    else if (this.clickCountArray.length < 5) {
+    this.buttonClickedStatus = true;
+    this.clickCount++;
+    this.clickCountArray.push(this.clickCount);
+    console.log("clickCount: " + this.clickCountArray.length);
   }
+
+  // else if (this.clickCountArray.length > 0 && this.clickCountArray.length < 5) {
+  //   this.buttonClickedStatus = false;
+  // }
+
   else {
-    this.buttonClickedStatus = false;
+    return this.buttonClickedStatus = false;
   }
   // console.log('Click Count Array:', this.clickCountArray);
-
+  }
 }
 
-}

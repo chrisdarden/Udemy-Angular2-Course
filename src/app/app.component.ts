@@ -10,7 +10,8 @@ import { Button } from "protractor";
 export class AppComponent {
   allowNewServer: boolean = false;
   userName: string = "";
-  clicks = [];
+  clickCountArray: number[] = [];
+  clickCount = 0;
   buttonClickedStatus: boolean = false;
 
   getUsername(): string {
@@ -35,13 +36,14 @@ resetUserNameButtonClick(event: any) {
 buttonClicked(event: any) {
   if(!this.buttonClickedStatus) {
     this.buttonClickedStatus = true;
+    this.clickCount++;
+    this.clickCountArray.push(this.clickCount);
   }
   else {
     this.buttonClickedStatus = false;
   }
-  console.log(event);
+  // console.log('Click Count Array:', this.clickCountArray);
 
-  
-  
 }
+
 }
